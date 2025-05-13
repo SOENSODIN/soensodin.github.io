@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link href="Port_Style.css" rel="stylesheet" type="text/css">
+        <link href="https://use.typekit.net/sqb4kcv.css" rel="stylesheet">
+		<script src="odin-porfolio.js"></script>
+    </head>
+
+    <body>
+		<div class="topnav">
+            <a href="Home_Page.html" class="active"></a>
+            <div id="myLinks">
+                <a href="Port_Page.html">portfolio</a>
+                <a href="Home_Page.html">about me</a>
+                <a href="Contact_Page.html">contact</a>
+            </div>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <div class="container" onclick="change(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="row">
+            <div class="col-m-8 col-6" id="title_portfolio">Portfolio</div>
+            
+        </div>
+          <button id="openFilterMenu">Open Filters</button>
+        <div class="row">
+            <div class="col-m-1 col-12" id="container_filterbuttons">
+				<span class="menu-title">Filter</span>
+                <button class="filters" id="filter_fotografie" onclick="FilterFotografie()">Fotografie</button>
+                <button class="filters" id="filter_webdesign" onclick="FilterWebdesign()">Webdesign</button>
+                <button class="filters" id="filter_videografie" onclick="FilterVideografie()">Videografie</button>
+                <button class="filters" id="filter_illustratie" onclick="FilterIllustratie()">Illustratie</button>
+				<button class="filters" id="display_all" onclick="DisplayAll()">Remove filter</button>
+				
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-m-12 col-12" id="container_werken">
+                <div class="werken type_fotografie" id="werk1"></div>
+                <div class="werken type_webdesign" id="werk2"></div>
+                <div class="werken type_videografie" id="werk3"></div>
+                <div class="werken type_illustratie" id="werk4"></div>
+                <div class="werken type_fotogtafie" id="werk5"></div>
+                <div class="werken type_webdesign" id="werk6"></div>
+                <div class="werken type_videografie" id="werk7"></div>
+                <div class="werken type_illustratie" id="werk8"></div>
+                <div class="werken type_fotografie" id="werk9"></div>
+                <div class="werken type_webdesign" id="werk10"></div>
+                <div class="werken type_fotografie" id="werk11"></div>
+                <div class="werken type_webdesign" id="werk12"></div>
+                <div class="werken type_videografie" id="werk13"></div>
+                <div class="werken type_illustratie" id="werk14"></div>
+                <div class="werken type_fotogtafie" id="werk15"></div>
+                <div class="werken type_webdesign" id="werk16"></div>
+                <div class="werken type_videografie" id="werk17"></div>
+                <div class="werken type_illustratie" id="werk18"></div>
+                <div class="werken type_fotografie" id="werk19"></div>
+                <div class="werken type_webdesign" id="werk20"></div>
+            </div>
+        </div>
+
+        <script>
+            var type_fotografie = document.getElementsByClassName("type_fotografie")
+            var type_webdesign = document.getElementsByClassName("type_webdesign")
+            var type_videografie = document.getElementsByClassName("type_videografie")
+            var type_illustratie = document.getElementsByClassName("type_illustratie")
+
+            function hide_fotografie(){for(var i = 0; i < type_fotografie.length; i++){type_fotografie[i].style.display = "none"}}
+            function show_fotografie(){for(var i = 0; i < type_fotografie.length; i++){type_fotografie[i].style.display = "block"}}
+            function hide_webdesign(){for(var i = 0; i < type_webdesign.length; i++){type_webdesign[i].style.display = "none"}}
+            function show_webdesign(){for(var i = 0; i < type_webdesign.length; i++){type_webdesign[i].style.display = "block"}}
+            function hide_videografie(){for(var i = 0; i < type_videografie.length; i++){type_videografie[i].style.display = "none"}}
+            function show_videografie(){for(var i = 0; i < type_videografie.length; i++){type_videografie[i].style.display = "block"}}
+            function hide_illustratie(){for(var i = 0; i < type_illustratie.length; i++){type_illustratie[i].style.display = "none"}}
+            function show_illustratie(){for(var i = 0; i < type_illustratie.length; i++){type_illustratie[i].style.display = "block"}}
+
+            function FilterFotografie(){
+                show_fotografie()
+                hide_webdesign()
+                hide_videografie()
+                hide_illustratie()
+            }
+
+            function FilterWebdesign(){
+                hide_fotografie()
+                show_webdesign()
+                hide_videografie()
+                hide_illustratie()
+            }
+
+            function FilterVideografie(){
+                hide_fotografie()
+                hide_webdesign()
+                show_videografie()
+                hide_illustratie()
+            }
+
+            function FilterIllustratie(){
+                hide_fotografie()
+                hide_webdesign()
+                hide_videografie()
+                show_illustratie()
+            }
+
+            function DisplayAll(){
+                show_fotografie()
+                show_webdesign()
+                show_videografie()
+                show_illustratie()
+            }
+			document.getElementById('openFilterMenu').addEventListener('click', function() {
+    	const menu = document.getElementById('container_filterbuttons');
+    	menu.classList.toggle('active');
+			});
+
+         
+        </script>
+    </body>
+</html>
