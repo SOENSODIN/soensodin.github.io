@@ -204,6 +204,7 @@ table {
     font-size: 1.5em;
     margin-bottom: 1em;
     font-weight: bold;
+	color:black !important;
 }
 	
    
@@ -298,6 +299,8 @@ table {
         color: white;
         font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
     }
+	
+	
 }
 
 /* Voor DESKTOP */

@@ -10,10 +10,10 @@
 
     <body>
 		<div class="topnav">
-            <a href="Home_Page.html" class="active"></a>
+            <a href="index.html" class="active"></a>
             <div id="myLinks">
                 <a href="Port_Page.html">portfolio</a>
-                <a href="Home_Page.html">about me</a>
+                <a href="index.html">about me</a>
                 <a href="Contact_Page.html">contact</a>
             </div>
 
@@ -34,7 +34,7 @@
           <button id="openFilterMenu">Open Filters</button>
         <div class="row">
             <div class="col-m-1 col-12" id="container_filterbuttons">
-				<span class="menu-title">Filter</span>
+				<span id="zwart" class="menu-title">Filter</span>
                 <button class="filters" id="filter_fotografie" onclick="FilterFotografie()">Fotografie</button>
                 <button class="filters" id="filter_webdesign" onclick="FilterWebdesign()">Webdesign</button>
                 <button class="filters" id="filter_videografie" onclick="FilterVideografie()">Videografie</button>
@@ -122,6 +122,7 @@
     	const menu = document.getElementById('container_filterbuttons');
     	menu.classList.toggle('active');
 			});
+			
 
          
         </script>
