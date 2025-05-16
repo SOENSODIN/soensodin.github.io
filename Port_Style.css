@@ -246,6 +246,7 @@ table {
         position: fixed;
         width:100vw;
         background-color:black;
+		height: 150;
     }
   
     .topnav a {

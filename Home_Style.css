@@ -30,40 +30,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-  background-color: black;
-  background-image:
-    radial-gradient(transparent 0.6em, #def 0.6em),
-    conic-gradient(at 1em 1em, transparent 270deg, #406 270deg),
-    conic-gradient(at 1em 1em, transparent 270deg, #404 270deg),
-    conic-gradient(at 1em 1em, transparent 270deg, #4205 270deg),
-    conic-gradient(at 1em 1em, transparent 270deg, #4206 270deg);
-  background-size: 1em 1em, 4em 4em, 4em 4em, 4em 4em, 4em 4em;
-  animation: bpx 12s infinite, bpy 12s -3.75s infinite;
+background: #6c0979;
+background: linear-gradient(0deg, rgba(108, 9, 121, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
-/* X-as animatie */
-@keyframes bpx {
-  0%, 7.5%, 100% { background-position-x: 0, 0, 1em, 2em, 3em; }
-  12.5%, 20%    { background-position-x: 0, 1em, 0, 3em, 2em; }
-  25%, 32.5%    { background-position-x: 0, -1em, -2em, 5em, 4em; }
-  37.5%, 45%    { background-position-x: 0, 1em, -4em, 7em, 2em; }
-  50%, 57.5%    { background-position-x: 0, -2em, -5em, 8em, 5em; }
-  62.5%, 70%    { background-position-x: 0, -3em, -4em, 7em, 6em; }
-  75%, 82.5%    { background-position-x: 0, -1em, -2em, 5em, 4em; }
-  87.5%, 95%    { background-position-x: 0, -3em, 0, 3em, 6em; }
-}
-
-/* Y-as animatie */
-@keyframes bpy {
-  0%, 7.5%, 100% { background-position-y: 0, 0, 1em, 2em, 3em; }
-  12.5%, 20%    { background-position-y: 0, 1em, 0, 3em, 2em; }
-  25%, 32.5%    { background-position-y: 0, -1em, -2em, 5em, 4em; }
-  37.5%, 45%    { background-position-y: 0, 1em, -4em, 7em, 2em; }
-  50%, 57.5%    { background-position-y: 0, -2em, -5em, 8em, 5em; }
-  62.5%, 70%    { background-position-y: 0, -3em, -4em, 7em, 6em; }
-  75%, 82.5%    { background-position-y: 0, -1em, -2em, 5em, 4em; }
-  87.5%, 95%    { background-position-y: 0, -3em, 0, 3em, 6em; }
-}
 
 ol, ul {
 	list-style: none;
@@ -118,7 +88,7 @@ table {
 	margin-top: 0px;
 	width:100vw;
 	background-color:black;
-	height: 300px
+	height: 150px
 }
 
 /* Style navigation menu links */
@@ -268,4 +238,7 @@ font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+}
+#info {
+	color: aqua;
 }
