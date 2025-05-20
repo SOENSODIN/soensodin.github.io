@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	
 background: black;
   background-image:
     radial-gradient(transparent 0.6em, #000 0.6em),
@@ -39,6 +40,7 @@ background: black;
     conic-gradient(at 1em 1em, transparent 270deg, #412 270deg);
   background-size: 1em 1em, 4em 4em, 4em 4em, 4em 4em, 4em 4em;
   animation: bpx 12s infinite, bpy 12s -3.75s infinite;
+	
 }
 
 @keyframes bpx {
@@ -123,6 +125,7 @@ table {
     content: "";
     clear: both;
     display: table;
+	
 }
 
 [class*="col-"] {
@@ -276,6 +279,7 @@ table {
 #tekst{
 	margin-top: 10vh;
 	margin: auto;
+	margin-bottom: 3vh;
 	display: block;
 	padding: 2VW;
 	text-align: center;	
@@ -302,3 +306,5 @@ table {
 #info {
 	color: aqua;
 }
+
+
