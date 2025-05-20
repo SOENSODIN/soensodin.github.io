@@ -10,11 +10,11 @@
 
     <body>
 		<div class="topnav">
-            <a href="index.html" class="active"></a>
+            <a href="index.html" ></a>
             <div id="myLinks">
-                <a href="Port_Page.html">portfolio</a>
-                <a href="index.html">about me</a>
-                <a href="Contact_Page.html">contact</a>
+                <a href="Port_Page.html">Portfolio</a>
+                <a href="index.html">Over</a>
+                <a href="Contact_Page.html">Contact</a>
             </div>
 
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -44,80 +44,88 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-m-12 col-12" id="container_werken">
-                <div class="werken type_fotografie" id="werk1"></div>
-                <div class="werken type_webdesign" id="werk2"></div>
-                <div class="werken type_videografie" id="werk3"></div>
-                <div class="werken type_illustratie" id="werk4"></div>
-                <div class="werken type_fotogtafie" id="werk5"></div>
-                <div class="werken type_webdesign" id="werk6"></div>
-                <div class="werken type_videografie" id="werk7"></div>
-                <div class="werken type_illustratie" id="werk8"></div>
-                <div class="werken type_fotografie" id="werk9"></div>
-                <div class="werken type_webdesign" id="werk10"></div>
-                <div class="werken type_fotografie" id="werk11"></div>
-                <div class="werken type_webdesign" id="werk12"></div>
-                <div class="werken type_videografie" id="werk13"></div>
-                <div class="werken type_illustratie" id="werk14"></div>
-                <div class="werken type_fotogtafie" id="werk15"></div>
-                <div class="werken type_webdesign" id="werk16"></div>
-                <div class="werken type_videografie" id="werk17"></div>
-                <div class="werken type_illustratie" id="werk18"></div>
-                <div class="werken type_fotografie" id="werk19"></div>
-                <div class="werken type_webdesign" id="werk20"></div>
-            </div>
-        </div>
+      <div class="row">
+  <div class="col-m-12 col-12" id="container_werken">
+    <div id="container_werken">
 
-        <script>
-            var type_fotografie = document.getElementsByClassName("type_fotografie")
-            var type_webdesign = document.getElementsByClassName("type_webdesign")
-            var type_videografie = document.getElementsByClassName("type_videografie")
-            var type_illustratie = document.getElementsByClassName("type_illustratie")
+      <!-- FOTOGRAFIE -->
+      <div class="werken type_fotografie">
+        <img src="Images/IMG_0040.jpg" alt="Foto 1" onclick="openOverlay(this)">
+      </div>
+      <div class="werken type_fotografie">
+        <img src="Images/IMG_0048.jpg" alt="Foto 2" onclick="openOverlay(this)">
+      </div>
+      <div class="werken type_fotografie">
+        <img src="Images/IMG_0083.jpg" alt="Foto 3" onclick="openOverlay(this)">
+      </div>
+      <div class="werken type_fotografie">
+        <img src="Images/IMG_0040.jpg" alt="Foto 4" onclick="openOverlay(this)">
+      </div>
 
-            function hide_fotografie(){for(var i = 0; i < type_fotografie.length; i++){type_fotografie[i].style.display = "none"}}
-            function show_fotografie(){for(var i = 0; i < type_fotografie.length; i++){type_fotografie[i].style.display = "block"}}
-            function hide_webdesign(){for(var i = 0; i < type_webdesign.length; i++){type_webdesign[i].style.display = "none"}}
-            function show_webdesign(){for(var i = 0; i < type_webdesign.length; i++){type_webdesign[i].style.display = "block"}}
-            function hide_videografie(){for(var i = 0; i < type_videografie.length; i++){type_videografie[i].style.display = "none"}}
-            function show_videografie(){for(var i = 0; i < type_videografie.length; i++){type_videografie[i].style.display = "block"}}
-            function hide_illustratie(){for(var i = 0; i < type_illustratie.length; i++){type_illustratie[i].style.display = "none"}}
-            function show_illustratie(){for(var i = 0; i < type_illustratie.length; i++){type_illustratie[i].style.display = "block"}}
+      <!-- WEBDESIGN -->
+      <div class="werken type_webdesign">
+        <img src="webdesign1.jpg" alt="Website design" onclick="openOverlay(this)">
+      </div>
 
-            function FilterFotografie(){
-                show_fotografie()
-                hide_webdesign()
-                hide_videografie()
-                hide_illustratie()
+      <!-- VIDEOGRAFIE -->
+      <div class="werken type_videografie">
+        <video controls>
+          <source src="video1.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- ILLUSTRATIE -->
+      <div class="werken type_illustratie">
+        <img src="illustratie1.jpg" alt="Illustratie" onclick="openOverlay(this)">
+      </div>
+
+    </div>
+
+     
+    <div id="overlay" onclick="closeOverlay()">
+      <span id="close">&times;</span>
+      <img id="overlayImage" src="" alt="">
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+	
+    const allTypes = ["type_fotografie", "type_webdesign", "type_videografie", "type_illustratie"];
+
+    function showOnly(typeToShow) {
+        allTypes.forEach(type => {
+            const elements = document.getElementsByClassName(type);
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.display = (type === typeToShow || typeToShow === "all") ? "block" : "none";
             }
+        });
 
-            function FilterWebdesign(){
-                hide_fotografie()
-                show_webdesign()
-                hide_videografie()
-                hide_illustratie()
-            }
+        // Optional: Hide filter menu after selection
+        document.getElementById('container_filterbuttons').classList.remove('active');
+    }
 
-            function FilterVideografie(){
-                hide_fotografie()
-                hide_webdesign()
-                show_videografie()
-                hide_illustratie()
-            }
+    // Filter button functions
+    function FilterFotografie()   { showOnly("type_fotografie"); }
+    function FilterWebdesign()   { showOnly("type_webdesign"); }
+    function FilterVideografie() { showOnly("type_videografie"); }
+    function FilterIllustratie() { showOnly("type_illustratie"); }
+    function DisplayAll()        { showOnly("all"); }
+	
+	function openOverlay(img) {
+  const overlay = document.getElementById("overlay");
+  const overlayImg = document.getElementById("overlayImage");
 
-            function FilterIllustratie(){
-                hide_fotografie()
-                hide_webdesign()
-                hide_videografie()
-                show_illustratie()
-            }
+  overlay.style.display = "flex";
+  overlayImg.src = img.src;
+  overlayImg.alt = img.alt;
+}
 
-            function DisplayAll(){
-                show_fotografie()
-                show_webdesign()
-                show_videografie()
-                show_illustratie()
-            }
+function closeOverlay() {
+  document.getElementById("overlay").style.display = "none";
+}
 		// Toggle filtermenu open/close
 document.getElementById('openFilterMenu').addEventListener('click', function () {
   const menu = document.getElementById('container_filterbuttons');
