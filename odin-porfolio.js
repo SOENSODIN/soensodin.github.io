@@ -1,5 +1,4 @@
 // JavaScript Document
-var naam = "Odin Soens";
 var nameChange = document.getElementById("naam")
 var unit = document.documentElement.scrollHeight / 100;
 var x = document.getElementById("myLinks");
@@ -15,20 +14,14 @@ function myFunction() {
     	x.style.display = "block";
 	}
 }
-function scrollFunction() {
-		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-			document.getElementById("navbar").style.top = "0";
-  } 	
-		else {
-		document.getElementById("navbar").style.top = "-50px";
-  }
-}
+
+
 	function change(x) {
   x.classList.toggle("change");
 }
 	function scrollNaarBeneden(tekst) {
         window.scrollTo({
-            top: 26 * unit,   // het aantal pixels om naar beneden te scrollen
+            top: 260 * unit,   // het aantal pixels om naar beneden te scrollen
             left: 0,     // geen horizontale scroll
             behavior: 'smooth' // maakt de scroll beweging vloeiend
         });

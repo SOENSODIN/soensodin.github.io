@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-background: linear-gradient();
+background: black;
   background-image:
     radial-gradient(transparent 0.6em, #000 0.6em),
     conic-gradient(at 1em 1em, transparent 270deg, #406 270deg),
@@ -202,11 +202,9 @@ table {
 }
 
 /* Style the active link (or home/logo) */
-.active {
-  background-color: #000000;
-  color: white;
-font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	padding-top: 0px;
+#active {
+
+	
 }
 
 /* Voor MOBIEL */

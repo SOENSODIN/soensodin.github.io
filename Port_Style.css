@@ -57,6 +57,7 @@ table {
     content: "";
     clear: both;
     display: table;
+	z-index: -1;
 }
 
 [class*="col-"] {
@@ -330,7 +331,21 @@ table {
         font-family: futura-pt, sans-serif;
     }
 
-
+#openFilterMenu {
+    position: fixed;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1em 2em;
+    border: none;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+    z-index: 999;
+    cursor: pointer;
+	display: none;
+}
     #display_all:hover{
         background-color: black;
         color: white;
@@ -472,9 +487,5 @@ table {
         color: black;
     }
   
-    .active {
-        background-color: #000000;
-        color: white;
-        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    }
+    
 }
