@@ -118,10 +118,21 @@
                 show_videografie()
                 show_illustratie()
             }
-			document.getElementById('openFilterMenu').addEventListener('click', function() {
-    	const menu = document.getElementById('container_filterbuttons');
-    	menu.classList.toggle('active');
-			});
+		// Toggle filtermenu open/close
+document.getElementById('openFilterMenu').addEventListener('click', function () {
+  const menu = document.getElementById('container_filterbuttons');
+  menu.classList.toggle('active');
+});
+
+// Sluit het menu als een filter wordt aangeklikt
+const filterButtons = document.querySelectorAll('#container_filterbuttons .filters');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', function () {
+    const menu = document.getElementById('container_filterbuttons');
+    menu.classList.remove('active');
+  });
+});
 			
 
          

@@ -141,7 +141,7 @@ table {
 
 
 #instagram{
-
+	margin-top: 5vh;
     width: 75px;
     height: 75px;
     background-image: url(Images/Instagram.png);
@@ -168,7 +168,7 @@ table {
 }
 
 #linkedin{
-
+	margin-top: 5vh;
     width: 75px;
     height: 75px;
     background-image: url(Images/Linkedin.png);
