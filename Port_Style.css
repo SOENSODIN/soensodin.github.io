@@ -288,7 +288,7 @@ table {
 }
 
     .topnav {
-        background-color: #000000;
+        background-color: #970689;
         position: fixed;
         overflow:inherit;
     }
@@ -299,7 +299,7 @@ table {
         text-align: center;
         position: fixed;
         width:100vw;
-        background-color:black;
+        background-color:#39004C;
 		height: 150;
     }
   
@@ -312,7 +312,7 @@ table {
     }
 
     .topnav a.icon {
-        background: black;
+        background: #39004C;
         display: block;
         position: absolute;
         left: 0;
@@ -530,7 +530,7 @@ table {
 }
 
     .topnav {
-        background-color: #000000;
+        background-color: #970689;
         position: fixed;
         overflow:inherit;
     }
@@ -541,7 +541,8 @@ table {
         text-align: center;
         position: fixed;
         width:100vw;
-        background-color:black;
+        background-color:#39004C;
+		height: 150;
     }
   
     .topnav a {
@@ -553,7 +554,7 @@ table {
     }
 
     .topnav a.icon {
-        background: black;
+        background: #39004C;
         display: block;
         position: absolute;
         left: 0;
@@ -588,6 +589,12 @@ table {
     .topnav a:hover {
         background-color: #ddd;
         color: black;
+    }
+  
+    .active {
+        background-color: #000000;
+        color: white;
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
     }
   
     
