@@ -99,7 +99,9 @@ background: black;
 
 }
 
-
+#link:hover{
+	color: #406 !important;
+}
 ol, ul {
 	list-style: none;
 }
@@ -311,6 +313,6 @@ table {
 
 
 
-#link:hover {
-	color:aqua
+a:hover {
+	color:aqua;
 }
