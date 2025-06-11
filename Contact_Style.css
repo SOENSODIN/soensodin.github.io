@@ -89,11 +89,13 @@ body {
 background: linear-gradient(0deg,rgba(108, 9, 121, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
+
 #pfp{
     width: 25vh;
     height: 25vh;
     border-radius: 50%;
-    background-image: url("IMG_20240924_150357_124.jpg");
+   background-image: url("Images/IMG_20240924_150357_124.jpg");
+
     background-size: contain;
     background-repeat: no-repeat; 
     margin:  auto;
@@ -302,7 +304,7 @@ background: linear-gradient(0deg,rgba(108, 9, 121, 1) 0%, rgba(0, 0, 0, 1) 100%)
     width: 25vh;
     height: 25vh;
     border-radius: 50%;
-    background-image: url("IMG_20240924_150357_124.jpg");
+    background-image: url("Images/IMG_20240924_150357_124.jpg");
     background-size: contain;
     background-repeat: no-repeat; 
     margin:  auto;

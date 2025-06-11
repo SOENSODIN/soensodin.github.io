@@ -209,6 +209,7 @@ table {
 	
 }
 
+
 /* Voor MOBIEL */
 @media only screen and (max-width: 600px) {
     .col-m-1 {width: 8.33%;}
@@ -309,3 +310,7 @@ table {
 }
 
 
+
+#link:hover {
+	color:aqua
+}
